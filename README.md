@@ -40,6 +40,7 @@ fetch("http://localhost:8000/cookie", {
 });
 ```
 
+## También puedes probar la API utilizando curl
 ```bash
 curl -X POST http://localhost:8000/cookie -H "Content-Type: application/json" -d "{\"MoodleSession\":\"Cookie de ejemplo\"}"
 ```
